@@ -1,0 +1,165 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5; /*espaço entre as linhas de tudo*/
+}
+
+img{
+max-width: 100%; /*largura máxima de qualquer imagem*/
+}
+
+.container{ /*classe p tudo que precisa ficar centralizado*/
+    margin-right: auto; 
+    margin-left: auto; 
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.header{
+    background-color: #fff;
+    width: 100%;
+}
+
+.logo-text{
+    text-transform: uppercase; /*tudo maiúculo*/ 
+    background-color: #63c6ae;
+    font-size: 24px; /*tamanho da fonte*/
+    margin: 0;
+    padding: 20px;
+    display: block; /*posição em bloco*/
+    float: left; /*flutua p a esquerda*/
+    text-decoration: none; /*sem o sublinhado por ser um link*/
+    font-weight: bold; /*mais ênfase na fonte*/
+    color: #fff;
+}
+
+.header__nav{
+    clear: left; /*limpa o float: left colocado no logo-text*/
+}
+
+.header__nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav li{
+    list-style-type: none; /*tira os bullets*/
+    background-color: #242a2c;
+    text-align: center; /*posição do texto*/
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.2); /*borda*/
+}
+
+.header__nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #586165;
+    font-size: 14px;
+    font-weight: 600; /*nº fonte pega no google fonts*/
+    display: block; /*atinge toda a área de cada bloco e os deixam sensíveis ao clique*/
+    padding: 25px 0; /*área atingida internamente de cada bloco*/
+    transition: .8s ease; /*p deixar mais suave a área clicável*/
+}
+
+.header__nav a:hover{ /*ao passar o mouse sobre*/
+    color: #63c6ae;
+}
+
+.header__btnMenu{
+
+}
+
+.hero{
+    height: 80vh; /*altura de 80% da viewport*/
+    padding: 40px 20px;
+    text-align: center;
+    display: flex; /*ajeita na vertical*/
+    flex-direction: column; /*p acertar as linhas que desalinharam*/
+    justify-content: center; /*centraliza*/
+    align-items: center; /*deixa tudo da área centralizado, inclusive o botão*/
+
+    /*gradient 1 e 2 + imagem --> gradient 1 e 2 = formam o desenho da seta branca na imagem*/
+    background: linear-gradient(45deg, white 50%, transparent 50%) left calc(50% + 20px) bottom no-repeat, /*gradient 1*/
+                linear-gradient(-45deg, white 50%, transparent 50%) left calc(50% - 20px) bottom no-repeat, /*gradient 2*/ 
+                url(../img/01.jpg); 
+    background-size: 40px 40px, 40px 40px, cover; /*gradient 1 e 2 c/ 40 de altura e 40 de largura e, cover p a imagem ocupar todo o espaço*/
+}
+
+.hero__title{
+    background-color: #63c6ae;
+    color: white;
+    font-size: 28px;
+    font-weight: 600; /*nº fonte pega no google fonts*/
+    padding: 30px, 20px;
+    text-transform: uppercase;
+}
+
+.hero__text{
+    background-color: #242a2c;
+    margin: 5px 30px 35px;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.hero__btn{
+    border: 1px solid rgba(255, 255, 255, .3);
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 5px; /*formato da borda*/
+    padding: 15px 25px;
+    display: inline-block; /*diminui o tamanho do bloco/botão*/
+    color: white;
+    text-decoration: none; /*sem o sublinhado por ser um link*/
+    font-size: 16px;
+    font-weight: 600; /*nº fonte pega no google fonts*/
+    text-transform: uppercase;
+}
+
+.people-cards{
+    margin-top: 2.5em;
+}
+
+.people-cards__card{
+    
+}
+
+.people-cards__card:hover{
+    outline: 5px solid #63c6ae; /*coloca uma borda sem modificar em nada o conteúdo*/
+    outline-offset: -5px; /*anda com o outline p fora e p dentro do elemento, p fora é com valor positivo e, p dentro é com valor negativo*/ 
+}
+
+.people-cards__card:hover .people-cards__avatar img{ /*efeito do avatar ao passar o mouse*/
+    transform: translateY(-50%);
+}
+
+.people-cards__card:hover .people-cards__title,
+.people-cards__card:hover .people-cards__text{
+    color: #63c6ae; /*cor da fonte ao passar o mouse*/
+}
+
+.people-cards__image{
+    width: 100%;
+}
+
+.people-cards__avatar{
+    margin: -55px auto; /*auto p centralizar*/
+    width: 88px;
+    height: 88px;
+    overflow: hidden; /*p esconder o 2º pedaço da imagem do avatar*/
+}
+
+.people-cards__content{ /*título e texto dos cards*/
+    text-align: center;
+    padding: 40px 25px 10px;
+    border-left: 1px solid #dbe1e7;
+}
+
+.people-cards__title{
+    color: #737c85;
+    font-size: 21px;
+    font-weight: normal; /*efeito da fonte*/   
+}
+
+.people-cards__text{
+    color: #929da5;
+    font-size: 14px;
+}
