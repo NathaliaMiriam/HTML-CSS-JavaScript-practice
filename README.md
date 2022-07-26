@@ -1,0 +1,1 @@
+Projeto para praticar HTML, CSS e JS pela Udemy.
