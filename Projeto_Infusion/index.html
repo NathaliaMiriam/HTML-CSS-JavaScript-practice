@@ -112,33 +112,41 @@
             </section>
         </div>
 
-        <section>
-            <article>
-                <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
+        <section class="content">
+            <div class="container">
+                <article>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. 
-                Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio. Interdum et malesuada fames ac 
-                ante ipsum primis in faucibus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. 
+                    Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio. Interdum et malesuada fames ac 
+                    ante ipsum primis in faucibus.</p>
 
-                <a href="#">BUTTON</a>
-                <a href="#">BUTTON</a>
-            </article>
+                    <a href="#" class="button button-primary">BUTTON</a>
+                    <a href="#" class="button button-secundary">BUTTON</a>
+                </article>
 
-            <article>
-                <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
+                <article>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. 
-                Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. 
+                    Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio.</p>
 
-                <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae lectus erat. Duis consequat laoreet velit. Mauris convallis,
-                sapien sit amet scelerisque accumsan, felis urna aliquet nunc, viverra mollis odio tellus a nisl. Nulla lobortis lectus non rutrum 
-                viverra. Sed et molestie libero. Sed ut ultrices dui.</p>
-            </article>
+                    <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae lectus erat. Duis consequat laoreet velit. Mauris convallis,
+                    sapien sit amet scelerisque accumsan, felis urna aliquet nunc, viverra mollis odio tellus a nisl. Nulla lobortis lectus non rutrum 
+                    viverra. Sed et molestie libero. Sed ut ultrices dui.</p>
+                </article>
+            </div>
         </section>
+        
 
-        <section>
-            <h2>Latest Articles</h2>
-            <div>
+        <section class="last-articles">
+            <div class="last-articles__title">
+                <div class="container">
+                    <h2>Latest Articles</h2>
+            </div>
+                </div>
+
+            <div class="last-articles__thumbs">
                 <a href="#"><img src="img/articles/01.jpg" alt=""></a>
                 <a href="#"><img src="img/articles/02.jpg" alt=""></a>
                 <a href="#"><img src="img/articles/03.jpg" alt=""></a>
@@ -154,19 +162,22 @@
             </div>
         </section>
 
-        <div>
-            <div>
+        <div class="laptop-slider">
+            <div class="slideshow">
                 <figure><img src="img/slider/slide-01.png" alt=""></figure>
                 <figure><img src="img/slider/slide-02.png" alt=""></figure>
                 <figure><img src="img/slider/slide-01.png" alt=""></figure>
                 <figure><img src="img/slider/slide-02.png" alt=""></figure>
-                <span class="prev"><i class="fa-solid fa-circle-chevron-left"></i></span>
-                <span class="next"><i class="fa-solid fa-circle-chevron-right"></i></span>
+                <span class="prev" style="display: none;"><i class="fa-solid fa-circle-chevron-left"></i></span>
+                <span class="next" style="display: none;"><i class="fa-solid fa-circle-chevron-right"></i></span>
+
+                <!-- o display:none esconde o elemento da pág. ...
+                    se o JS estiver disp. na pág. os atributos dos style acima serão retirados  -->
             </div>
         </div> 
     
-        <section>
-            <div>
+        <section class="quote-container">
+            <div class="quote-slideshow">
                 <figure>
                     <h2>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero.</h2>
                     
@@ -185,27 +196,33 @@
                 </figure>
             </div>
 
-            <span class="prev"><i class="fa-solid fa-circle-chevron-left"></i></span>
-            <span class="next"><i class="fa-solid fa-circle-chevron-right"></i></span>
+            <span class="prev" style="display:none;"><i class="fa-solid fa-circle-chevron-left"></i></span>
+            <span class="next" style="display:none;"><i class="fa-solid fa-circle-chevron-right"></i></span>
         </section>
 
-        <footer>
-            <h2>Infusion</h2>
+        <footer class="footer">
+            <div class="container">
+                <h2 class="footer__logo">Infusion</h2>
 
-            <p>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero. Maecenas
-            diam est, venenatis vitae dui in, vestibulum mollis arcu. Donec eu nibh tincidunt, dapibus sem eu, aliquam dolor. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq.</p>
+                <p>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero. Maecenas
+                diam est, venenatis vitae dui in, vestibulum mollis arcu. Donec eu nibh tincidunt, dapibus sem eu, aliquam dolor. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq.</p>
 
-            <p>Aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo 
-            eros, vitae laoreet lectus aliq.</p>
+                <p>Aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo 
+                eros, vitae laoreet lectus aliq.</p>
 
-            <ul>
-                <li><a href="#">List One</a></li>
-                <li><a href="#">Page Two</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Contact Me</a></li>
-            </ul>
-        </footer>    
+                <ul class="footer__links">
+                    <li><a href="#">List One</a></li>
+                    <li><a href="#">Page Two</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </div>
+        </footer>
+        
+        <script src="js/menu.js"></script>
+        <script src="js/main.js"></script>
+        
     </body>
 </html>

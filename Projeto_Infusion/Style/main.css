@@ -13,6 +13,7 @@ max-width: 100%; /*largura máxima de qualquer imagem*/
     margin-left: auto; 
     padding-right: 1em;
     padding-left: 1em;
+    max-width: 980px;
 }
 
 .header{
@@ -31,6 +32,7 @@ max-width: 100%; /*largura máxima de qualquer imagem*/
     text-decoration: none; /*sem o sublinhado por ser um link*/
     font-weight: bold; /*mais ênfase na fonte*/
     color: #fff;
+    text-align: right; /*coloca o logo p a direita*/
 }
 
 .header__nav{
@@ -163,3 +165,205 @@ max-width: 100%; /*largura máxima de qualquer imagem*/
     color: #929da5;
     font-size: 14px;
 }
+
+.content{
+    background-color: #f8f9f9;
+    padding: 20px 0 80px;
+    border-top: 1px solid #e3e3e3;
+}
+
+.content h3{
+    color: #737c85;
+    font-size: 21px;
+    padding-top: 40px;
+    font-weight: 400; /*nº fonte pega no google fonts*/
+}
+
+.content p{
+    color: #929da5;
+    font-size: 14px;
+    word-spacing: 3px; /*espaçamento entre as letras*/
+}
+
+.button{
+    padding: 15px 40px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    margin-right: 15px;
+    border-radius: 3px;
+    transition: background .5s;
+}
+
+.button-primary{
+    background-color: #63c6ae;
+    color: white;
+}
+
+.button-secundary{
+    background-color: #455357;
+    color: white;
+}
+
+.button:hover{
+    background-color: #929da5;
+}
+
+.last-articles__title{
+    background-color: #63c6ae;
+    padding: 5px 0;
+}
+
+.last-articles__title h2{
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400; /*nº fonte pega no google fonts*/
+}
+
+.last-articles__thumbs{ /*encaixe das imagens*/
+    display: grid; /*p deixar uma img abaixo da outra*/
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 0;
+}
+
+/*auto-fill = p que as imgs fiquem s encaixadas na largura do pai e encaixe quantas forem necessárias*/
+/*max 1fr = máximo uma fração */
+/*grid-auto-rows - está rel. com o auto-fill, cada linha criada, automaticamente, terá o grid-auto-rows*/
+
+.last-articles__thumbs img{ /*p corrigir os espaços entre as imgs*/
+    display: block;
+    width: 100%; /*p q as imgs ocupem todo o espaço e ñ haja intervalo entre elas*/
+}
+
+.laptop-slider{
+    background-color: #242a2c;
+    padding: 125px 0 100px;
+    width: 100%;
+    overflow: auto; /*add a barra de rolagem nesta div, se tiver que ter uma barra de rolagem*/
+}
+
+.slideshow{
+    white-space: nowrap;
+    /*white-space = trata como o elemento deve se comportar quando se tem um espaço em branco. Por padrão quebra a linha
+    now-rap = ñ permite a quebra de linha, ou seja, tds as imgs ficarão obrigatóriamente em uma única linha*/
+}
+
+.slideshow figure{
+    display: inline-block; /*p se comportar como uma única linha*/
+}
+
+.quote-container{
+    background-color: #63c6ae;
+    padding: 50px 0;
+    border-bottom: 12px solid #58b9a1;
+}
+
+.quote-slideshow h2{
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: normal; /*tira o negrito*/
+}
+
+.quote-slideshow figcaption{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*no-js = p quando o js ñ estiver habilitado. Foi colocado no html em body e estou usando aqui*/
+.no-js .quote-slideshow figure + figure{ /*pega toda tag figure que vêm imediamente após a outra tag figure q está em .quote-slideshow*/
+    margin-top: 5em;
+}
+
+.footer{
+    background-color: #242a2c;
+    padding: 50px 0 250px;
+    color: #454e51;
+    font-size: 14px;
+}
+
+.footer__links li{
+    list-style: none; /*tira os bullets*/
+}
+
+.footer__links a{
+    color: #454e51;
+    display: block;
+    font-weight: 600; /*nº fonte pega no google fonts*/
+    text-decoration: none; /*sem o sublinhado por ser um link*/
+}
+
+.footer__logo{
+    text-transform: uppercase;
+}
+
+/*responsividade*/
+@media screen and (min-width: 1024px){
+    .header{ 
+        position: fixed; /*posição fixa*/
+    }
+
+    .logo-text{
+        width: 25%; /*25% do elemento pai*/
+        box-sizing: border-box; /*p q o padding de 20px colocado lá em cima em .logo-text ñ some ao tamanho do elemento*/
+    }
+    
+    .header__btnMenu{
+        display: none; /*ñ aparecerá na visualização com o js, oq aparecerá será o botãozinho de menu c js habilitado*/
+    }
+
+    .header__nav{
+        float: left; /*coloca a nav ao lado do logo*/
+        width: 75%; /*pois o logo já tem 25%*/
+        clear: none; /*limpa o clear: left colocado anteriormente mais pra cima*/
+        max-width: 800px; /*deixa os elementos do menu mais próximos*/
+    }
+
+    .header__nav ul{
+        display: flex; /*pois fica mais fácil distribuir os elementos de dentro (cada uma das li)*/
+        justify-content: space-around; /*distribui os elementos do menu*/
+    }
+
+    .header__nav li{
+        border-bottom: none; /*tira o border-bottom colocado anteriormente mais pra cima*/
+        flex-grow: 1; /*deixa mais sensível a área de clique de cada uma das li do menu*/
+    }
+
+    .header__nav a{
+        background-color: white;     
+    }
+    
+    .people-cards{
+        display: grid; /*p deixar um card ao lado do outro*/
+        grid-template-columns: repeat(4, 1fr); /*4 colunas iguais*/
+        grid-gap: 30px; /*espaço entre os cards*/
+    }
+
+    .content .container{
+        display: flex; /*transforma os dois conteúdos em 2 colunas*/
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .last-articles__thumbs{
+        grid-template-columns: repeat(6, 1fr); /*distribui as imgs em 6 colunas quando a pág. estiver no tamanho de 1024px*/
+    }
+
+    .footer .container{
+        display: flex;
+    }
+
+    .footer .container > * { /*coloca uma margem apenas nos filhos diretos do container*/
+        margin: 1.5em;
+
+    }
+    
+
+} 
+
+
+
