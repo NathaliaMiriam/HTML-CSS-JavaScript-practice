@@ -5,7 +5,7 @@ body{
 }
 
 img{
-max-width: 100%; /*largura máxima de qualquer imagem*/
+    max-width: 100%; /*largura máxima de qualquer imagem*/
 }
 
 .container{ /*classe p tudo que precisa ficar centralizado*/
@@ -16,9 +16,104 @@ max-width: 100%; /*largura máxima de qualquer imagem*/
     max-width: 980px;
 }
 
-.header{
-    background-color: #fff;
+.js .header{
+    position: fixed; /*menu fixo quando o js estiver disponível*/
     width: 100%;
+    z-index: 10; /*p q o slide ñ sobreponha o header ao movimentar a pág. p barra de rolagem*/
+}
+
+.js .header__nav{
+    transition: max-height 1s;
+}
+
+.js .laptop-slider{ 
+    overflow: hidden; /*tira a barra de rolagem dos slides*/
+    color: white; /*p as setinhas dos slides*/
+}
+
+.js .laptop-slider .slideshow{ 
+    position: relative; /*posiciona absolutamente*/
+    width: 100%;
+    margin: auto;
+    max-width: 950px; /*p centralizar os slides*/
+}
+
+.js .laptop-slider figure{
+    opacity: 0;
+    transition: 1s opacity;
+    width: 100%;
+    position: absolute; /*posicionado absolutamente com relação ao slideshow*/
+    top: 0;
+    left: 0;
+}
+
+.js .laptop-slider figure.show{ /*com a classe show*/
+    opacity: 1;
+    position: static; /*volta ao padrão e os slides não ficam piscando*/    
+}
+
+.js .laptop-slider .prev, .js .laptop-slider .next{
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    cursor: pointer; /*cursor da mãozinha*/
+}
+
+.js .laptop-slider .prev{
+    left: 10px;
+    font-size: 30px; /*tamanho do botão*/
+}
+
+.js .laptop-slider .next{
+    right: 10px;
+    font-size: 30px; /*tamanho do botão*/
+}
+
+.js .quote-slideshow{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 950px;
+    box-sizing: border-box;
+    padding: 0 50px;
+    color: white;
+}
+
+.js .quote-slideshow figure h2{
+    margin-top: 0;
+}
+
+.js .quote-slideshow figure{
+    opacity: 0;
+    transition: 1s opacity;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    right: 50px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.js .quote-slideshow figure.show{
+    opacity: 1;
+    position: static;    
+}
+
+.js .quote-slideshow .prev, .js .quote-slideshow .next{
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.js .quote-slideshow .prev{
+    left: 10px;
+    font-size: 30px; /*tamanho do botão*/
+}
+
+.js .quote-slideshow .next{
+    right: 10px;
+    font-size: 30px; /*tamanho do botão*/
 }
 
 .logo-text{
@@ -33,6 +128,11 @@ max-width: 100%; /*largura máxima de qualquer imagem*/
     font-weight: bold; /*mais ênfase na fonte*/
     color: #fff;
     text-align: right; /*coloca o logo p a direita*/
+}
+
+.header{
+    background-color: #fff;
+    width: 100%;
 }
 
 .header__nav{
@@ -66,8 +166,12 @@ max-width: 100%; /*largura máxima de qualquer imagem*/
     color: #63c6ae;
 }
 
-.header__btnMenu{
-
+.header__btnMenu{ /*js*/
+    float: right;
+    margin: 1.5em;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
 }
 
 .hero{
@@ -301,8 +405,8 @@ max-width: 100%; /*largura máxima de qualquer imagem*/
     text-transform: uppercase;
 }
 
-/*responsividade*/
-@media screen and (min-width: 1024px){
+/*responsividade - p ser visto num aparelho mobile de verdade*/ 
+@media screen and (min-width: 1025px){
     .header{ 
         position: fixed; /*posição fixa*/
     }
@@ -360,9 +464,7 @@ max-width: 100%; /*largura máxima de qualquer imagem*/
     .footer .container > * { /*coloca uma margem apenas nos filhos diretos do container*/
         margin: 1.5em;
 
-    }
-    
-
+    } 
 } 
 
 
